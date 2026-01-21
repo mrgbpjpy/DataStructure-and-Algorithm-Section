@@ -89,7 +89,7 @@ const Problem3 = () => {
                             case '/':
                                 return getDiv(numA, numB);
                             default:
-                                return '';
+                                throw new Error('Invalid operation');
                         }
                     })()}
                      
