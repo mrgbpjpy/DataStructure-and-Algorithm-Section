@@ -76,7 +76,7 @@ const Problem3 = () => {
                 </button>
                 </div>
                
-                <p >
+                <p style={{fontSize: "10px"}} >
                     {(() => {
                         if (numA === null || numB === null || !operation) return '';
                         switch (operation) {
