@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
+# Data Structure and Algorithm Section (70 Problems)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo is a personal practice set of 70 data structure + algorithm problems.
 
-Currently, two official plugins are available:
+New problems (with solutions) will be added over time as I work through the set.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The UI is built with React + TypeScript so each problem can be implemented as a small, testable component.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- React + TypeScript
+- Vite
+- Vitest + Testing Library (`@testing-library/react`, `@testing-library/jest-dom`)
+- ESLint
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Install deps:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Run the app:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Build:
+
+```bash
+npm run build
+```
+
+## Testing
+
+Run tests in watch mode:
+
+```bash
+npm test
+```
+
+Run tests once:
+
+```bash
+npm run test:run
+```
+
+Run a single test file (from repo root):
+
+```bash
+npx vitest run src/components/Problem_1/Problem1.test.tsx
+```
+
+Note: an empty `*.test.tsx` file will fail with "No test suite found". If you want placeholders, use `test.todo(...)`.
+
+## Project Structure
+
+Problem components live under `src/components/`.
+
+Example:
+
+```
+src/components/
+  Problem_1/
+    Problem1.tsx
+    Problem1.test.tsx
+  Problem_2/
+    Problem2.tsx
+    Problem2.test.tsx
+```
+
+## Adding a New Problem
+
+1. Create a folder: `src/components/Problem_<n>/`
+2. Add the component: `Problem<n>.tsx`
+3. Add the test file: `Problem<n>.test.tsx`
+4. Start with a placeholder test, then replace with real assertions as you implement.
+
+## License
+
+Personal learning project. Add a license if you plan to open it up for reuse.
