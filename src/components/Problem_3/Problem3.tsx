@@ -61,6 +61,21 @@ const Problem3 = () => {
                 <div > 
                 <input type="number" name="a" value={numA ?? ''} onChange={(e) =>setNumA(Number(e.target.value))} style={{textAlign: "center"}} />
                 <input type="number" name="b" value={numB ?? ''} onChange={(e) =>setNumB(Number(e.target.value))} style={{textAlign: "center"}}/>
+                </div>
+                <div >
+                    <button type="button" onClick={() => setOperation('+')} style={{height: '5%', width: '5%', fontSize: '10px'}}>+</button>
+                    <button type="button" onClick={() => setOperation('-')}style={{height: '5%', width: '5%', fontSize: '10px'}}>-</button>
+                    <button type="button" onClick={() => setOperation('*')}style={{height: '5%', width: '5%', fontSize: '10px'}}>*</button>
+                    <button type="button" onClick={() => setOperation('/')}style={{height: '5%', width: '5%', fontSize: '10px'}}>/</button>
+                    <button type="reset" value="Reset"style={{height: '5%', width: '5%', fontSize: '10px'}}  onClick={() => {
+                    setNumA(null);
+                    setNumB(null);
+                    setOperation('');
+                }} >
+                    Reset
+                </button>
+                </div>
+               
                 <p >
                     {(() => {
                         if (numA === null || numB === null || !operation) return '';
@@ -80,22 +95,6 @@ const Problem3 = () => {
                      
                     
                 </p>
-                </div>
-                <div >
-                    <button type="button" onClick={() => setOperation('+')} style={{height: '5%', width: '5%', fontSize: '10px'}}>+</button>
-                    <button type="button" onClick={() => setOperation('-')}style={{height: '5%', width: '5%', fontSize: '10px'}}>-</button>
-                    <button type="button" onClick={() => setOperation('*')}style={{height: '5%', width: '5%', fontSize: '10px'}}>*</button>
-                    <button type="button" onClick={() => setOperation('/')}style={{height: '5%', width: '5%', fontSize: '10px'}}>/</button>
-                    <button type="reset" value="Reset"style={{height: '5%', width: '5%', fontSize: '10px'}}  onClick={() => {
-                    setNumA(null);
-                    setNumB(null);
-                    setOperation('');
-                }} >
-                    Reset
-                </button>
-                </div>
-               
-                
                 
             </form>
         </div>
