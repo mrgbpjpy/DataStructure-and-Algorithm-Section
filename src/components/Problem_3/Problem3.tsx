@@ -67,7 +67,7 @@ const Problem3 = () => {
                     <button type="button" onClick={() => setOperation('-')}style={{height: '5%', width: '5%', fontSize: '10px'}}>-</button>
                     <button type="button" onClick={() => setOperation('*')}style={{height: '5%', width: '5%', fontSize: '10px'}}>*</button>
                     <button type="button" onClick={() => setOperation('/')}style={{height: '5%', width: '5%', fontSize: '10px'}}>/</button>
-                    <button type="reset" value="Reset"style={{height: '5%', width: '5%', fontSize: '10px'}}  onClick={() => {
+                    <button type="reset" value="C"style={{height: '5%', width: '5%', fontSize: '10px'}}  onClick={() => {
                     setNumA(null);
                     setNumB(null);
                     setOperation('');
