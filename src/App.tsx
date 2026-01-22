@@ -7,7 +7,7 @@ import Problem3 from './components/Problem_3/Problem3'
 import Problem4 from './components/Problem_4/Problem4'
 import Problem5 from './components/Problem_5/Problem5'
 import Problem6 from './components/Problem_6/Problem6'
-import Problem7 from './components/Problem_7/Problem6'
+import Problem7 from './components/Problem_7/Problem7'
 
 function App() {
   
