@@ -23,8 +23,7 @@ const Problem6 = () => {
         setContentMaxHeight(nextMaxHeight)
     }
 
-    const [arrayInput, setArrayInput] = useState<string>([].toString());
-    const result = Math.max(...arrayInput.split(',').map(num => Number(num.trim())).filter(num => !isNaN(num)))
+
 
 
 
@@ -52,10 +51,9 @@ const Problem6 = () => {
             
                 
                 <form onSubmit={(e) => e.preventDefault()}>
-                <label>Find the maximum number in an array:</label><br/>
-                <input type="text" name="array" placeholder="Example: 1,45,23,89,78,56" value={arrayInput} onChange={(e) => setArrayInput(e.target.value)} />
+                <label>{/* Title Case */}</label><br/>
                 <p style={{fontSize: "10px"}} >
-                  {result}
+                  {/*Result*/}
                 </p>
                 
             </form>
