@@ -1,10 +1,12 @@
 
 import './App.css'
+
 import Problem1 from './components/Problem_1/Problem1'
 import Problem2 from './components/Problem_2/Problem2'
 import Problem3 from './components/Problem_3/Problem3'
 import Problem4 from './components/Problem_4/Problem4'
 import Problem5 from './components/Problem_5/Problem5'
+import Problem6 from './components/Problem6/Problem6'
 
 function App() {
   
@@ -18,6 +20,7 @@ function App() {
       <Problem3 />
       <Problem4 />
       <Problem5 />
+      <Problem6 />  
     </>
   )
 }

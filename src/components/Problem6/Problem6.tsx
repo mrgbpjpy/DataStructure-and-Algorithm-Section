@@ -2,18 +2,12 @@
 import {useRef, useState} from 'react'
 
 
-
-
 const Problem6 = () => {
     const [isOpen, setIsOpen] = useState(false)
     const contentRef = useRef<HTMLDivElement>(null)
     const [contentMaxHeight, setContentMaxHeight] = useState(0)
 
-    
-   
-
-
-    
+        
     // Remove result state, use derived value instead
 
     const onToggle = () => {
@@ -22,10 +16,6 @@ const Problem6 = () => {
         setIsOpen(nextIsOpen)
         setContentMaxHeight(nextMaxHeight)
     }
-
-
-
-
 
   return (
     <>
