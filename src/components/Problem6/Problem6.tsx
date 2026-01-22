@@ -4,7 +4,7 @@ import {useRef, useState} from 'react'
 
 
 
-const Problem5 = () => {
+const Problem6 = () => {
     const [isOpen, setIsOpen] = useState(false)
     const contentRef = useRef<HTMLDivElement>(null)
     const [contentMaxHeight, setContentMaxHeight] = useState(0)
@@ -30,7 +30,7 @@ const Problem5 = () => {
 
   return (
     <>
-    <h2>Problem 5</h2>
+    <h2>Problem 6</h2>
 
     <button 
         type="button"
@@ -39,7 +39,7 @@ const Problem5 = () => {
         aria-controls="problem3-content"
         onClick={onToggle}
         >
-           Find Max Number
+           Title Case
     </button>
 
     <div
@@ -65,4 +65,4 @@ const Problem5 = () => {
   )
 }
 
-export default Problem5
+export default Problem6

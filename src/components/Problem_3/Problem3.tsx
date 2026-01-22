@@ -37,7 +37,7 @@ const Problem3 = () => {
 
   return (
     <>
-    <h2>Problem3</h2>
+    <h2>Problem 3</h2>
 
     <button 
         type="button"

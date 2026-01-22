@@ -22,7 +22,7 @@ const Problem2 = () => {
 
   return (
      <>
-      <h2>Problem2</h2>
+      <h2>Problem 2</h2>
 
       <button
         type="button"

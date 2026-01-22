@@ -39,7 +39,7 @@ const Problem4 = () => {
 
   return (
     <>
-    <h2>Problem4</h2>
+    <h2>Problem 4</h2>
 
     <button 
         type="button"
