@@ -8,9 +8,9 @@ import Problem4 from './components/Problem_4/Problem4'
 import Problem5 from './components/Problem_5/Problem5'
 import Problem6 from './components/Problem_6/Problem6'
 import Problem7 from './components/Problem_7/Problem7'
-
 import Problem8 from './components/Problem_8/Problem8'
 import Problem9 from './components/Problem_9/Problem9'
+import Problem10 from './components/Problem_10/Problem10'
 
 
 function App() {
@@ -29,7 +29,8 @@ function App() {
       <Problem7 />
       <Problem8 />
       <Problem9 />
-
+      <Problem10 />
+      
     </>
   )
 }
