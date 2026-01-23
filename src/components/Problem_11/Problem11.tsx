@@ -5,14 +5,23 @@ import {useRef, useState} from 'react'
 const SetWords = (str: string) => {
 
     if (!str.trim()) return ""; 
-    // nothing to transform (prevents [""] case)
-    // const reverseString = (words: string) => {
-    //     return words.split("").reverse().join("");
-    // }
-
-    // return reverseString(words);
-
     
+    const resultArr: string[] = [];
+    const sanitized = str.toLowerCase().replace(/[^0-9]/g, '');
+    const limit = Number(sanitized || 0);
+    for (let i = 1; i <= limit; i++) {
+        if(i % 6 === 0 && i % 8 === 0) {
+            resultArr.push("FizzBuzz ");
+        } else if (i % 6 === 0) {
+            resultArr.push("Fizz ");
+
+        } else if (i % 8 === 0) {
+            resultArr.push("Buzz ");
+        } else{
+            resultArr.push(i.toString()+ " ") ;
+        }
+    }
+    return resultArr;
 }
 
 
@@ -23,7 +32,7 @@ function Problem11() {
 
 
 
-    const [words, setWords] = useState("change me");
+    const [words, setWords] = useState("0");
     const Result = SetWords(words);
 
     const onToggle = () => {
@@ -35,7 +44,7 @@ function Problem11() {
 
     return (
         <>
-            <h2>Problem 10</h2>
+            <h2>Problem 11</h2>
 
             <button
                 type="button"
@@ -44,7 +53,7 @@ function Problem11() {
                 aria-controls="problem3-content"
                 onClick={onToggle}
             >
-               Remove Duplicates
+               FizzBuzz 
             </button>
 
             <div
@@ -57,8 +66,14 @@ function Problem11() {
 
 
                     <form onSubmit={(e) => e.preventDefault()}>
-                        <label> This will remove duplicates in a string</label><br />
-                        <input type='text' value={words} onChange={(e) => setWords(e.target.value)} style={{ width: "500px" }} />
+                        <label> This will do FizzBuzz logic</label><br />
+                        <input
+                            type="text"
+                            value={words}
+                            inputMode="numeric"
+                            onChange={(e) => setWords(e.target.value.replace(/[^0-9]/g, ''))}
+                            style={{ width: "500px" }}
+                        />
                         <p style={{ fontSize: "10px" }}>
                             {Result}
                         </p>
@@ -70,4 +85,4 @@ function Problem11() {
     );
 }
 
-export default Problem11
+export default Problem11;
