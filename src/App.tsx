@@ -8,10 +8,10 @@ import Problem4 from './components/Problem_4/Problem4'
 import Problem5 from './components/Problem_5/Problem5'
 import Problem6 from './components/Problem_6/Problem6'
 import Problem7 from './components/Problem_7/Problem7'
-<<<<<<< HEAD
+
 import Problem8 from './components/Problem_8/Problem8'
-=======
->>>>>>> bf1edd1441491c8e5f523331686f79bcd1cc3cd5
+import Problem9 from './components/Problem_9/Problem9'
+
 
 function App() {
   
@@ -27,10 +27,9 @@ function App() {
       <Problem5 />
       <Problem6 />  
       <Problem7 />
-<<<<<<< HEAD
       <Problem8 />
-=======
->>>>>>> bf1edd1441491c8e5f523331686f79bcd1cc3cd5
+      <Problem9 />
+
     </>
   )
 }
