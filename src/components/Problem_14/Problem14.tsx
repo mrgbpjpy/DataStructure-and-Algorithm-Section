@@ -63,7 +63,7 @@ function Problem14() {
 
 
                     <form onSubmit={(e) => e.preventDefault()}>
-                        <label> Enter names separated by commas</label><br />
+                        <label> Enter letters separated by commas</label><br />
                         <input
                             type="text"
                             value={letters}
