@@ -29,8 +29,8 @@ function Problem14() {
 
 
 
-    const [letters, setLetters] = useState('');
-    const result = Find_Letters(letters.split(''));
+    const [letters, setLetters] = useState('a,b,c,d,f');
+    const result = Find_Letters(letters.split(',').map(l => l.trim()).filter(Boolean));
 
     const onToggle = () => {
         const nextIsOpen = !isOpen;
