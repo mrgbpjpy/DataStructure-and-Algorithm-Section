@@ -47,7 +47,7 @@ function Problem13() {
                 aria-controls="problem13-content"
                 onClick={onToggle}
             >
-              Display Likes
+              Find Missing Number
             </button>
 
             <div
@@ -60,7 +60,7 @@ function Problem13() {
 
 
                     <form onSubmit={(e) => e.preventDefault()}>
-                        <label> Enter names separated by commas</label><br />
+                        <label> Find Missing Number</label><br />
                         <input
                             type="text"
                             value={words}
