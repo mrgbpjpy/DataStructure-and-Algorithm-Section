@@ -2,20 +2,23 @@
 import { useRef, useState } from 'react'
 
 
-const formatLikes = (rawNames: string) => {
-  const names = rawNames
-    .split(',')
-    .map((n) => n.trim())
-    .filter(Boolean);
 
-  const count = names.length;
-
-  if (count === 0) return 'no one likes this';
-  if (count === 1) return `${names[0]} likes this`;
-  if (count === 2) return `${names[0]} and ${names[1]} like this`;
-  if (count === 3) return `${names[0]}, ${names[1]} and ${names[2]} like this`;
-  return `${names[0]}, ${names[1]} and ${count - 2} others like this`;
+const Find_Letters = (arr: string[]): string => {
+    // Create a string of the alphabet
+  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // Find the index of the first letter in the array in the alphabet string
+  const startIndex = alphabet.indexOf(arr[0]);
+     // Loop through the array
+     for (let i = 0; i < arr.length; i++)
+     {
+        if (arr[i] !== alphabet[startIndex + i]){
+            return alphabet[startIndex + i];
+        }
+     }
+  return '';
 };
+
+
 
 
 
@@ -26,8 +29,8 @@ function Problem14() {
 
 
 
-    const [words, setWords] = useState('');
-    const result = formatLikes(words);
+    const [letters, setLetters] = useState('');
+    const result = Find_Letters(letters.split(''));
 
     const onToggle = () => {
         const nextIsOpen = !isOpen;
@@ -47,7 +50,7 @@ function Problem14() {
                 aria-controls="problem14-content"
                 onClick={onToggle}
             >
-              Display Likes
+              Find Missing Letter
             </button>
 
             <div
@@ -63,8 +66,8 @@ function Problem14() {
                         <label> Enter names separated by commas</label><br />
                         <input
                             type="text"
-                            value={words}
-                            onChange={(e) => setWords(e.target.value.replace(/[^a-zA-Z,\s]/g, ''))}
+                            value={letters}
+                            onChange={(e) => setLetters(e.target.value.replace(/[^a-zA-Z,\s]/g, ''))}
                             style={{ width: "500px" }}
                         />
                         <p style={{ fontSize: "10px" }}>
