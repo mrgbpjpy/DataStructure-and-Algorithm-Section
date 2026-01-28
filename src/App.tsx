@@ -13,6 +13,7 @@ import Problem9 from './components/Problem_9/Problem9'
 import Problem10 from './components/Problem_10/Problem10'
 import Problem11 from './components/Problem_11/Problem11'
 import Problem12 from './components/Problem_12/Problem12'
+import Problem13 from './components/Problem_13/Problem13'
 
 function App() {
   
@@ -33,6 +34,7 @@ function App() {
       <Problem10 />
       <Problem11 /> 
       <Problem12 />
+      <Problem13 />
     </>
   )
 }
